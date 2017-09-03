@@ -8,9 +8,10 @@
 require 'selenium-webdriver'
 require File.expand_path("../../model/lcg_logger.rb", __FILE__)
 
-include LcgLogger
+
 class Start
   # include the mode in logger.rb with logger function
+  include LcgLogger
   def open_url(browser=":firefox",url="http://www.baidu.com")
     log_write("I" , "open firefor with selenium")
     # open browser
