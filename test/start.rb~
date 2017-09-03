@@ -1,0 +1,13 @@
+require 'selenium-webdriver'
+
+# open browser
+driver = Selenium::WebDriver.for(:firefox)
+
+# open url for hao123
+driver.get("http://www.baidu.com")
+
+# input data into search text
+element =  driver.find_element(:name,"wd")
+element.send_keys("emacs")
+element.submit
+
